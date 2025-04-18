@@ -10,7 +10,7 @@ bs4==0.0.1
 certifi==2019.6.16
 cffi==1.14.2
 chardet==3.0.4
-Choco>1.0.5
+Choco>=1.0.5
 Click==7.0
 colorama==0.4.1
 cryptography==2.8
