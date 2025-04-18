@@ -53,7 +53,7 @@ MarkupSafe>=2.0.1
 mccabe>=0.6.1
 mem-top==0.1.6
 memory-profiler==0.55.0
-numpy==1.17.0
+numpy>=1.17.0
 oauth2==1.9.0.post1
 oauthlib==3.0.1
 objgraph==3.4.0
