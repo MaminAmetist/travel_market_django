@@ -23,10 +23,10 @@ def basket(request):
 
     return render(request, 'basketapp/basket.html', content)
 
+
 # добавление продукта в корзину
 @login_required
 def basket_add(request, pk):
-
     if 'login' in request.META.get('HTTP_REFERER'):
         return HttpResponseRedirect(reverse('acc:accommodations', args=[pk]))
 
@@ -52,9 +52,12 @@ def basket_remove(request, pk):
     return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
 
 
+def is_ajax(request):
+    return request.META.get('HTTP_X_REQUESTED_WITH') == 'XMLHttpRequest'
+
+
 @login_required
 def basket_edit(request, pk, nights):
-    print("привет")
     if request.is_ajax():
         nights = int(nights)
         new_basket_item = Basket.objects.get(pk=int(pk))
@@ -76,3 +79,4 @@ def basket_edit(request, pk, nights):
                                   content)
 
         return JsonResponse({'result': result})
+
