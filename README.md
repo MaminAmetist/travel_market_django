@@ -19,7 +19,7 @@ https://travel-market-render.onrender.com
 ## Технологии
 
 - Python 3.x
-- Django 3.x / 4.x
+- Django 3.x
 - PostgreSQL (или другой поддерживаемый СУБД)
 - HTML, CSS, JavaScript (по необходимости)
 
